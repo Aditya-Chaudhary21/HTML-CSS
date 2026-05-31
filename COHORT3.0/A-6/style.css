@@ -1,0 +1,472 @@
+@font-face{
+    font-family:Reckless;
+    src:url(./fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+@font-face{
+    font-family:Figtree;
+    src:url(./fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
+}
+@font-face{
+    font-family:Midnight;
+    src:url(./fonts/midnight-sans-rd-12-medium-trial.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FBF9EB;
+  
+}
+nav{
+    width:100%;
+    background-color: #FFFEFB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.35em 1rem;
+    font-family:Reckless;
+    font-size: 0.8rem;
+    position:sticky;
+    left:0;
+    top:0;
+}
+nav i{
+    font-size: 2rem;
+    width: 33%;
+}
+nav .nav-part-1{
+    display: flex;
+    gap: 1rem;
+   
+    width: 33%;
+    display:none;
+}
+.nav-part-1 h3{
+font-weight: 300;
+}
+nav .nav-part-2{
+    width: 20%;
+    height: auto;
+    display: flex;
+
+    
+}
+nav .nav-part-2 img{
+    width: 100%;
+    object-fit: cover;
+}
+nav .nav-part-3{
+    font-size: 10px;
+    display: flex;
+    width: 33%;
+    word-spacing: 5px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: end;
+}
+.nav-part-3 h3{
+font-weight: 300;
+    display:none;
+}
+.nav-part-3 svg{
+   
+    width:30px;
+    height: 30px;
+}
+#section-1{
+    width: 100%;
+    height: 85vh;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry_mobile.webp?v=1774284087&width=511);
+    /* background-image:url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2700.0); */
+    background-size: cover;
+    background-position:center;  
+    display: flex; 
+    flex-direction: column;
+    justify-content: end;
+   text-align: center;
+    padding: 2rem 1rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid black;
+}
+#section-1 h1{
+    font-size:clamp(2rem,5vw,3rem);
+    line-height: 1.8rem;
+    font-family:Reckless;
+    color: white;
+    font-weight: 500;
+    
+}
+#section-1 p{
+    font-size: clamp(0.9rem,1vw,1.2rem);
+    color: white;
+    font-family: Figtree;
+    font-weight: 400;
+    
+}
+#section-1 button{
+  
+    padding:1rem;
+    border: none;
+    background-color: #1D1C3D;
+    color: white;
+    font-family: Figtree;
+    border-radius: 1.2rem;  
+    font-size: 1.1rem;
+}
+#section-2{
+    width: 100%;
+    height: 100vh;
+    padding: 7rem 1rem;
+}
+#section-2 .section2-text{
+        width: 100%;
+        font-family: Reckless;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2-text h1{
+    font-size: clamp(2.2rem,5vw,3rem);
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+
+}
+#section-2> .btn-1{
+    padding:0.1rem 0.5rem;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    font-family: Midnight;
+    font-weight: 600;
+    background-color: #DAAEEA;
+    border-radius: 0.5rem;
+   margin-top: 4rem;
+   rotate: -5deg;
+
+}
+
+#section-2 .card-container{
+width: 100%;
+padding: 2rem 0;
+display: flex;
+overflow-x: auto;
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+
+flex-shrink:0;
+}
+.card-top{
+    width:90%;
+height: 75vh;
+background-color: #C1EE91;
+position: relative;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+align-items: end;
+justify-content: space-between;
+border-radius: 1rem;
+border: 1px solid black;
+overflow: hidden;
+}
+.card-top-text{
+    width:100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+}
+.card-top-text button{
+    padding:0.3rem 0.2rem;
+    border-radius:0.3rem;
+    border:1px solid black;
+    background-color: white;
+    font-family: midnight;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+.card-top-text span{
+    font-size:1.2rem;
+    font-family: Reckless;
+}
+.card-top img{
+    position: absolute;
+    height: 80%;
+width: 80%;
+object-fit: cover;
+object-position: center;
+align-self: center;
+transition: all ease 0.3s;
+}
+
+.card-btm-text{
+    background-color: white;
+    padding:0.6rem 0.3rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid black;
+}
+.card-top:hover img{
+    scale: 1.1;
+}
+.card-btm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+.card-btm h1{
+    font-family: Reckless;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.card-btm h3{
+    font-family: Reckless;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.card-btm p{
+    width: 90%;
+   font-family: Figtree;
+   align-self: start;
+    font-size: 0.9rem;
+    opacity: 0.8;
+   
+
+}
+.card-1{
+    display: flex;
+    flex-direction: column;
+
+flex-shrink:0;
+}
+
+.card-top-1{
+    width:90%;
+height: 75vh;
+background-color:#FFD884;
+position: relative;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+align-items: end;
+justify-content: space-between;
+border-radius: 1rem;
+border: 1px solid black;
+overflow: hidden;
+}
+.card-top-text-1{
+    width:100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+}
+.card-top-text-1 button{
+    padding:0.3rem 0.2rem;
+    border-radius:0.3rem;
+    border:1px solid black;
+    background-color: white;
+    font-family: midnight;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+.card-top-text-1 span{
+    font-size:1.2rem;
+    font-family: Reckless;
+}
+.card-top-1 img{
+    position: absolute;
+    height: 80%;
+width: 80%;
+object-fit: cover;
+object-position: center;
+align-self: center;
+
+transition: all ease 0.3s;
+}
+
+.card-btm-text-1{
+    background-color: white;
+    padding:0.6rem 0.3rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid black;
+}
+.card-top-1:hover img{
+    scale: 1.1;
+}
+.card-btm-1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+.card-btm-1 h1{
+    font-family: Reckless;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.card-btm-1 h3{
+    font-family: Reckless;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.card-btm-1 p{
+    width: 90%;
+   font-family: Figtree;
+   align-self: start;
+    font-size: 0.9rem;
+    opacity: 0.8;
+   
+
+}
+
+
+@media(min-width:1024px){
+
+    
+nav{
+    width:100%;
+    background-color: #FFFEFB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1rem;
+    font-family:Reckless;
+    font-size: 0.6rem;
+    position:sticky;
+   
+}
+    nav .nav-part-1{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.6rem;
+    width: 20%;
+    
+}
+nav i{
+    display:none;
+}
+.nav-part-1 h3{
+  
+    font-weight: 300;
+}
+nav .nav-part-2{
+    width: 15%;
+    height: auto;
+    display: flex;   
+}
+
+.nav-part-3 {
+ display:flex;
+   width:50%;
+}
+.nav-part-3 h3{
+
+font-weight: 300;
+font-size: 0.8rem;
+display:block;
+white-space: nowrap;
+}
+
+#section-1{
+    width:100%;
+    text-align:start;
+    padding:3rem 2rem;
+    background-image:url(https://www.twoleavestea.com/cdn/shop/files/AlpineBerry.webp?v=1774284236&width=2250.0);
+    background-size:cover;
+
+}
+#section-1 h1{
+    width:25%;
+    line-height:3rem
+}
+#section-1 p{
+    width: 40%;
+}
+#section-1 button{
+    width:fit-content;
+    padding:1rem 3rem;
+    border-radius: 1.2rem;
+}
+.section2-text h1{
+    width: 40%;
+}
+#section-2> .btn-1{
+  display:none;
+
+}
+.card-container{
+    margin-top: 8rem;
+}
+.card-top{
+    width:100%;
+height: 60vh;
+
+}
+.card-container{
+    gap: 1rem;
+}
+
+.card-top img{
+    position: absolute;
+    height: 90%;
+width: 80%;
+object-fit: cover;
+object-position: center;
+align-self: center;
+transition: all ease 0.3s;
+}
+.card{ 
+flex-shrink:0;
+
+}
+
+
+.card-top-1{
+    width:100%;
+height: 60vh;
+
+}
+
+.card-top-1 img{
+    position: absolute;
+    height: 90%;
+width: 100%;
+object-fit: cover;
+object-position: center;
+align-self: center;
+transition: all ease 0.3s;
+}
+.card-1{ 
+flex-shrink:0;
+
+}
+}
